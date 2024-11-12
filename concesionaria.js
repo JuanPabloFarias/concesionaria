@@ -20,8 +20,7 @@ const concesionaria = {
         return this.vehiculos.filter(element => element.km < 100);
     },
 
-    autosNuevos2() { 
-        return this.vehiculos.filter(car => car.km < 100)},
+    autosNuevos2() { return this.vehiculos.filter(car => car.km < 100)},
 // listaDeVentas: retorna la lista de los autos vendidos.
     listaDeVentas: function(){
         return this.vehiculos.filter(element => element.vendido === true);
@@ -38,7 +37,8 @@ const concesionaria = {
     },
 
     totalDeVentas2: function() { return this.listaDeVentas().reduce((total, vehiculo) => total + vehiculo.precio, 0); },
-// autosQuePuedeComprar: retorna la lista de los autos que sean menores o iguales al importe indicado por el cliente.
+
+    // autosQuePuedeComprar: retorna la lista de los autos que sean menores o iguales al importe indicado por el cliente.
     autosQuePuedeComprar: function(importe){
         return this.vehiculos.filter(element => element.precio <= importe);
     },
@@ -47,9 +47,11 @@ const concesionaria = {
 }
 
 //console.log(concesionaria.autosNuevos());
+//console.log(concesionaria.autosNuevos2());
 //console.log(concesionaria.listaDeVentas());
 //console.log(concesionaria.totalDeVentas());
+//console.log(concesionaria.totalDeVentas2());
 //console.log(concesionaria.autosQuePuedeComprar(100000));
-console.log(concesionaria.autosQuePuedeComprar2(100000));
+//console.log(concesionaria.autosQuePuedeComprar2(100000));
 
 module.exports = concesionaria;
